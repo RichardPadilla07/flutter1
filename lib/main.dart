@@ -26,8 +26,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// ...
-
 class MyAppState extends ChangeNotifier {
   var current = WordPair.random();
 
@@ -49,30 +47,10 @@ class MyAppState extends ChangeNotifier {
   }
 }
 
-// ...
-
-// ...
-
-// ...
-
-// ...
-
-// ...
-
-// ...
-
-// ...
-
 class MyHomePage extends StatefulWidget {
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-
-// ...
-
-// ...
-
-// ...
 
 class _MyHomePageState extends State<MyHomePage> {
   var selectedIndex = 0;
@@ -129,11 +107,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-// ...
-
-// ...
-// ...
-
 class GeneratorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -186,8 +159,6 @@ class BigCard extends StatelessWidget {
 
   final WordPair pair;
 
-// ...
-
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -210,8 +181,6 @@ class BigCard extends StatelessWidget {
     );
   }
 }
-
-// ...
 
 class FavoritesPage extends StatelessWidget {
   @override

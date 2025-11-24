@@ -4,7 +4,6 @@ void main() {
   runApp(const MyApp());
 }
 
-
 // Es
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -30,7 +29,9 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 58, 183, 68)),
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: const Color.fromARGB(255, 58, 183, 68),
+        ),
       ),
       home: const MyHomePage(title: 'Pagina de bienvenida a ESOTILIN'),
     );
@@ -57,6 +58,21 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
+  bool _isPrime(int n) {
+    if (n < 2) return false;
+    for (int i = 2; i * i <= n; i++) {
+      if (n % i == 0) return false;
+    }
+    return true;
+  }
+
+  int _nextPrime(int current) {
+    int next = current + 1;
+    while (!_isPrime(next)) {
+      next++;
+    }
+    return next;
+  }
 
   void _incrementCounter() {
     setState(() {
@@ -65,7 +81,8 @@ class _MyHomePageState extends State<MyHomePage> {
       // so that the display can reflect the updated values. If we changed
       // _counter without calling setState(), then the build method would not be
       // called again, and so nothing would appear to happen.
-      _counter += 3;
+      //_counter++;
+      _counter = _nextPrime(_counter);
     });
   }
 

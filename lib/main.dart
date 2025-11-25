@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
-        title: 'Namer App',
+        title: 'Practica Flutter 1',
         theme: ThemeData(
           useMaterial3: true,
           colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color.fromARGB(255, 34, 255, 89)),
+              seedColor: const Color.fromARGB(255, 248, 34, 255)),
         ),
         home: MyHomePage(),
       ),
